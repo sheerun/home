@@ -34,6 +34,7 @@ zinit load sheerun/home
 - Ctrl-a goes to the start of command, Ctrl-e to the end (like in other inputs)
 - Ctrl-z toggles process back and forth between background and foreground (useful for vim)
 - Adds extra characters to word definition so Ctrl-w works better
+- Makes autocompletion faster, more accurate, and enables fuzzy matching
 - You can type git commands without `git` (for example `log` for `git log` or `merge` for `git merge`)
 - A few of extra git aliases:
   - `st` is `git status`
