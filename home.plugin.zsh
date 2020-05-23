@@ -6,6 +6,9 @@ unset RPROMPT
 bindkey '^a' beginning-of-line
 bindkey '^e' end-of-line
 
+# make it easier to remove words with ctrl-w
+export WORDCHARS='*?[]~&;!$%^<>'
+
 # git aliases
 alias st='git st'
 alias add='git add'
