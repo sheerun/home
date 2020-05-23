@@ -80,12 +80,6 @@ if command -v gls > /dev/null; then
   alias ls='gls --color=tty --group-directories-first'
 fi
 
-# install fzf
-if command -v git > /dev/null && [[ ! -d $HOME/.fzf ]]; then
-  echo "Downloading fzf..."
-  git clone --depth 1 https://github.com/junegunn/fzf.git $HOME/.fzf 2> /dev/null
-fi
-
 # save history in ~/.zsh_history
 export HISTFILE=$HOME/.zsh_history
 
@@ -96,14 +90,20 @@ export HISTSIZE=100000
 # save lines in history file as soon as they appear instead of on exit
 setopt share_history
 
+# install fzf
+if command -v git > /dev/null && [[ ! -d $HOME/.fzf ]]; then
+  echo "Downloading fzf..."
+  git clone --depth 1 https://github.com/junegunn/fzf.git $HOME/.fzf 2> /dev/null
+fi
+
 if [[ -d $HOME/.fzf ]]; then
   # setup fzf
   if [[ ! "$PATH" == *$HOME/.fzf/bin* ]]; then
-    echo "Installing fzf..."
     export PATH="${PATH:+${PATH}:}$HOME/.fzf/bin"
   fi
 
   if ! command -v fzf > /dev/null; then
+    echo "Installing fzf..."
     $HOME/.fzf/install --no-key-bindings --no-completion --no-update-rc --no-bash --no-fish --no-zsh &> /dev/null
   fi
 
