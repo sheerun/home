@@ -9,6 +9,9 @@ bindkey '^e' end-of-line
 # make it easier to remove words with ctrl-w
 export WORDCHARS='*?[]~&;!$%^<>'
 
+# set shell language to english by default
+export LANG="en_US.UTF-8"
+
 # git aliases
 alias st='git st'
 alias add='git add'
