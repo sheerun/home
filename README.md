@@ -20,6 +20,9 @@ zplug sheerun/home
 # for antigen
 antigen bundle sheerun/home
 
+# for antibody
+antibody bundle sheerun/home
+
 # for zinit
 zinit load sheerun/home
 ```
