@@ -29,8 +29,9 @@ zinit load sheerun/home
 
 ## Features
 
-- Shows green ⌂ character or red ✘ if previous command failed
+- Shows green ⌂ by default or red ✘ if previous command failed
 - Shows current directory name (type `pwd` for full path)
+- Ctrl-a goes to the start of command, Ctrl-e to the end (like in other inputs)
 
 ## Anti-features
 
