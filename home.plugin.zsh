@@ -8,3 +8,13 @@ bindkey '^e' end-of-line
 
 # git aliases
 alias st='git st'
+alias add='git add'
+alias log='git log'
+alias push='git push'
+alias pull='git pull --tags'
+alias stash='git stash'
+alias clone='git clone'
+alias fetch='git fetch'
+alias merge='git merge -s recursive -X patience'
+alias branch='git branch'
+alias rebase='git rebase'

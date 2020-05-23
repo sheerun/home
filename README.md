@@ -32,6 +32,7 @@ zinit load sheerun/home
 - Shows green ⌂ by default or red ✘ if previous command failed
 - Shows current directory name (type `pwd` for full path)
 - Ctrl-a goes to the start of command, Ctrl-e to the end (like in other inputs)
+- You can type git commands without `git` (for example `log` for `git log` or `merge` for `git merge`)
 
 ## Anti-features
 
