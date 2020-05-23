@@ -33,6 +33,13 @@ zinit load sheerun/home
 - Shows current directory name (type `pwd` for full path)
 - Ctrl-a goes to the start of command, Ctrl-e to the end (like in other inputs)
 - You can type git commands without `git` (for example `log` for `git log` or `merge` for `git merge`)
+- A few of extra git aliases:
+  - `st` is `git status`
+  - `ci` is `git commit`
+  - `co` is `git checkout`
+  - `br` is `git branch`
+  - `dc` is `git diff --cached`
+  - `amend` is `git commit -C HEAD --amend`
 
 ## Anti-features
 
