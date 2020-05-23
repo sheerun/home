@@ -31,6 +31,7 @@ zinit load sheerun/home
 
 ## Anti-features
 
+- Nothing for the right side of prompt (no mess when copying commands and their output)
 - Doesn't show any git information in prompt (type `st` for git status)
 
 ## License
