@@ -32,3 +32,16 @@ alias amend='git commit -C HEAD --amend'
 
 # support aliases when using sudo
 alias sudo='sudo '
+
+# ctrl-z can take you back to process
+fancy-ctrl-z () {
+  if [[ $#BUFFER -eq 0 ]]; then
+    BUFFER="fg"
+    zle accept-line
+  else
+    zle push-input
+    zle clear-screen
+  fi
+}
+zle -N fancy-ctrl-z
+bindkey '^Z' fancy-ctrl-z
