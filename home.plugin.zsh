@@ -86,6 +86,16 @@ if command -v git > /dev/null && [[ ! -d $HOME/.fzf ]]; then
   git clone --depth 1 https://github.com/junegunn/fzf.git $HOME/.fzf 2> /dev/null
 fi
 
+# save history in ~/.zsh_history
+export HISTFILE=$HOME/.zsh_history
+
+# increase history size
+export SAVEHIST=100000
+export HISTSIZE=100000
+
+# save lines in history file as soon as they appear instead of on exit
+setopt share_history
+
 if [[ -d $HOME/.fzf ]]; then
   # setup fzf
   if [[ ! "$PATH" == *$HOME/.fzf/bin* ]]; then
