@@ -18,3 +18,14 @@ alias fetch='git fetch'
 alias merge='git merge -s recursive -X patience'
 alias branch='git branch'
 alias rebase='git rebase'
+
+# extra git aliases
+alias st='git status'
+alias ci='git commit'
+alias co='git checkout'
+alias br='git branch'
+alias dc='git diff --cached'
+alias amend='git commit -C HEAD --amend'
+
+# support aliases when using sudo
+alias sudo='sudo '

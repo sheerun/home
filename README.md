@@ -40,6 +40,7 @@ zinit load sheerun/home
   - `br` is `git branch`
   - `dc` is `git diff --cached`
   - `amend` is `git commit -C HEAD --amend`
+- All aliases just work when you use `sudo`
 
 ## Anti-features
 
