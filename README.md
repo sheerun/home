@@ -1,6 +1,6 @@
 # ⌂ home
 
-> Pretty, minimalistic, one-line ZSH prompt you'll enjoy
+> Pretty, short, one-line ZSH prompt that makes you feel at home
 
 ## Installation
 
