@@ -71,7 +71,6 @@ fi
 if command -v git > /dev/null && [[ ! -d $HOME/.fzf ]]; then
   echo "Downloading fzf..."
   git clone --depth 1 https://github.com/junegunn/fzf.git $HOME/.fzf 2> /dev/null
-  clear
 fi
 
 if [[ -d $HOME/.fzf ]]; then
@@ -79,7 +78,6 @@ if [[ -d $HOME/.fzf ]]; then
   if [[ ! "$PATH" == *$HOME/.fzf/bin* ]]; then
     echo "Installing fzf..."
     export PATH="${PATH:+${PATH}:}$HOME/.fzf/bin"
-    clear
   fi
 
   if ! command -v fzf > /dev/null; then
@@ -92,3 +90,5 @@ if [[ -d $HOME/.fzf ]]; then
   # setup fzf bindings
   source "$HOME/.fzf/shell/key-bindings.zsh"
 fi
+
+clear
