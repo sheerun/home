@@ -1,4 +1,4 @@
-# Home
+# ⌂ home
 
 > Pretty, minimalistic, one-line ZSH prompt you'll enjoy
 
