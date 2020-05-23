@@ -61,3 +61,8 @@ zstyle -e ':completion:*:approximate:*' max-errors 'reply=($((($#PREFIX+$#SUFFIX
 
 # ignore completion functions for commands you don't have
 zstyle ':completion:*:functions' ignored-patterns '_*'
+
+# list colorful directories first if possible
+if command -v gls > /dev/null; then
+  alias ls='gls --color=tty --group-directories-first'
+fi

@@ -44,6 +44,7 @@ zinit load sheerun/home
   - `dc` is `git diff --cached`
   - `amend` is `git commit -C HEAD --amend`
 - All aliases just work when you use `sudo`
+- Enables colors and directories-first if GNU utils are available
 
 ## Anti-features
 
