@@ -78,6 +78,10 @@ if [[ -d $HOME/.fzf ]]; then
     export PATH="${PATH:+${PATH}:}$HOME/.fzf/bin"
   fi
 
+  if ! command -v fzf > /dev/null; then
+    $HOME/.fzf/install --no-key-bindings --no-completion --no-update-rc --no-bash --no-fish --no-zsh &> /dev/null
+  fi
+
   # setup fzf autocompletion
   [[ $- == *i* ]] && source "$HOME/.fzf/shell/completion.zsh" 2> /dev/null
 
