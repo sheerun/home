@@ -49,7 +49,7 @@ bindkey '^Z' fancy-ctrl-z
 # make autocompletion faster by caching and prefix-only matching
 zstyle ':completion:*' accept-exact '*(N)'
 zstyle ':completion:*' use-cache on
-zstyle ':completion:*' cache-path ~/.zsh/cache
+zstyle ':completion:*' cache-path $HOME/.zsh/cache
 
 # fuzzy matching of completions for when you mistype them
 zstyle ':completion:*' completer _complete _match _approximate
@@ -65,4 +65,22 @@ zstyle ':completion:*:functions' ignored-patterns '_*'
 # list colorful directories first if possible
 if command -v gls > /dev/null; then
   alias ls='gls --color=tty --group-directories-first'
+fi
+
+# install fzf
+if command -v git > /dev/null && [[ ! -d $HOME/.fzf ]]; then
+  git clone --depth 1 https://github.com/junegunn/fzf.git $HOME/.fzf 2> /dev/null
+fi
+
+if [[ -d $HOME/.fzf ]]; then
+  # setup fzf
+  if [[ ! "$PATH" == *$HOME/.fzf/bin* ]]; then
+    export PATH="${PATH:+${PATH}:}$HOME/.fzf/bin"
+  fi
+
+  # setup fzf autocompletion
+  [[ $- == *i* ]] && source "$HOME/.fzf/shell/completion.zsh" 2> /dev/null
+
+  # setup fzf bindings
+  source "$HOME/.fzf/shell/key-bindings.zsh"
 fi
