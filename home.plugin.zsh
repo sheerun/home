@@ -69,6 +69,11 @@ zstyle ':completion:*:functions' ignored-patterns '_*'
 zstyle -e ':completion:*:default' list-colors 'reply=("${PREFIX:+=(#bi)($PREFIX:t)*==34=34}:${(s.:.)LS_COLORS}")';
 zstyle ':completion:*' squeeze-slashes true
 
+# better filter select
+zstyle ':filter-select:highlight' matched fg=red
+zstyle ':filter-select' max-lines 10
+zstyle ':filter-select' rotate-list yes
+zstyle ':filter-select' case-insensitive yes # enable case-insensitive search
 
 # list colorful directories first if possible
 if command -v gls > /dev/null; then
