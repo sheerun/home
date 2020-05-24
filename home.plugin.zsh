@@ -114,4 +114,4 @@ if [[ -d $HOME/.fzf ]]; then
   source "$HOME/.fzf/shell/key-bindings.zsh"
 fi
 
-clear
+source plugins/*.plugin.zsh
