@@ -114,4 +114,5 @@ if [[ -d $HOME/.fzf ]]; then
   source "$HOME/.fzf/shell/key-bindings.zsh"
 fi
 
-source plugins/*.plugin.zsh
+0=${(%):-%N}
+source ${0:A:h}/plugins/*.zsh
