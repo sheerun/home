@@ -49,6 +49,7 @@ zinit load sheerun/home
 - Enables colors and directories-first if GNU utils are available
 - Sets shell language to English by default (`LANG="en_US.UTF-8"`)
 - Any text can be safely pasted in iTerm2, xterm, without worrying it will execute
+- `man` pages are colorful
 
 ## Anti-features
 
