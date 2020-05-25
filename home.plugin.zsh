@@ -13,7 +13,7 @@ export WORDCHARS='*?[]~&;!$%^<>'
 export LANG="en_US.UTF-8"
 
 # git aliases
-alias st='git st'
+alias status='git status -sb'
 alias add='git add'
 alias log='git log'
 alias push='git push'
@@ -22,15 +22,16 @@ alias stash='git stash'
 alias clone='git clone'
 alias fetch='git fetch'
 alias merge='git merge -s recursive -X patience'
-alias branch='git branch'
+alias branch='git branch -vv'
 alias rebase='git rebase'
 
 # extra git aliases
-alias st='git status'
+alias st='git status -sb'
 alias ci='git commit'
 alias co='git checkout'
-alias br='git branch'
+alias br='git branch -vv'
 alias dc='git diff --cached'
+alias lg="log --color --graph --oneline --abbrev-commit"
 alias amend='git commit -C HEAD --amend'
 
 # support aliases when using sudo
