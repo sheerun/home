@@ -31,7 +31,7 @@ zinit load sheerun/home
 
 - Shows green ⌂ by default or red ✘ if previous command failed
 - Shows current directory name (type `pwd` for full path)
-- Ctrl-a goes to the start of command, Ctrl-e to the end (like in other inputs)
+- Use emacs keybindings (for example ctrl-a to go to start of command, ctrl-e to the end)
 - Ctrl-z toggles process back and forth between background and foreground (useful for vim)
 - Adds extra characters to word definition so Ctrl-w works better
 - Makes autocompletion faster, more accurate, and enables fuzzy matching
