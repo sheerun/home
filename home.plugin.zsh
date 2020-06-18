@@ -90,6 +90,9 @@ export HISTSIZE=100000
 # save lines in history file as soon as they appear instead of on exit
 setopt share_history
 
+# allow to go back with popd
+setopt autopushd
+
 # install fzf
 if command -v git > /dev/null && [[ ! -d $HOME/.fzf ]]; then
   echo "Downloading fzf..."
