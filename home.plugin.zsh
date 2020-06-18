@@ -93,6 +93,9 @@ setopt share_history
 # allow to go back with popd
 setopt autopushd
 
+# allow to use C-s and C-q shortcuts in vim
+stty -ixon
+
 # install fzf
 if command -v git > /dev/null && [[ ! -d $HOME/.fzf ]]; then
   echo "Downloading fzf..."
