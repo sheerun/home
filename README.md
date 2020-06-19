@@ -33,6 +33,7 @@ zinit load sheerun/home
 - Shows current directory name (type `pwd` for full path)
 - Use emacs keybindings (for example ctrl-a to go to start of command, ctrl-e to the end)
 - Ctrl-z toggles process back and forth between background and foreground (useful for vim)
+- Different default prompt color for ssh sessions
 - Adds extra characters to word definition so Ctrl-w works better
 - Makes autocompletion faster, more accurate, and enables fuzzy matching
 - Adds history lines as soon as they appear, rather than waiting for shell exit

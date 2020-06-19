@@ -1,5 +1,10 @@
 # the prompt itself
-PROMPT="%F{000}%(?.%K{148}.%K{red}) %(?.⌂.✘) %F{249}%K{236} %1~ %k%f "
+if [ -z "$SSH_CLIENT" ]; then
+  PROMPT="%F{000}%(?.%K{148}.%K{red}) %(?.⌂.✘) %F{249}%K{236} %1~ %k%f "
+else
+  PROMPT="%F{000}%(?.%K{33}.%K{red}) %(?.⌂.✘) %F{249}%K{236} %1~ %k%f "
+fi
+
 unset RPROMPT
 
 # use emacs key-bindings
