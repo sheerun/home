@@ -140,7 +140,7 @@ if [[ -z "$EDITOR" ]]; then
 fi
 
 # find programs embedded in dotfiles
-export PATH="$HOME/.bin:$PATH"
+export PATH="/usr/local/sbin:$HOME/.bin:/$PATH"
 
 # set newer shell if exists
 if [[ -f /usr/local/bin/zsh ]]; then
