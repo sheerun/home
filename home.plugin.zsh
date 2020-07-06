@@ -11,10 +11,14 @@ unset RPROMPT
 bindkey -e
 
 # make it easier to remove words with ctrl-w
-export WORDCHARS='*?[]~&;!$%^<>'
+if [[ -z "$WORDCHARS" ]]; then
+  export WORDCHARS='*?[]~&;!$%^<>'
+fi
 
-# set shell language to english by default
-export LANG="en_US.UTF-8"
+# ensure locale settings are properly set-up.
+if [[ -z "$LANG" ]]; then
+  export LANG='en_US.UTF-8'
+fi
 
 # git aliases
 alias status='git status -sb'
@@ -123,6 +127,24 @@ if [[ -d $HOME/.fzf ]]; then
 
   # setup fzf bindings
   source "$HOME/.fzf/shell/key-bindings.zsh"
+fi
+
+# set `open` tool as default `BROWSER` on OS X.
+if [[ "$OSTYPE" == darwin* ]]; then
+  export BROWSER='open'
+fi
+
+# make vim default editor
+if [[ -z "$EDITOR" ]]; then
+  export EDITOR=vim
+fi
+
+# find programs embedded in dotfiles
+export PATH="$HOME/.bin:$PATH"
+
+# set newer shell if exists
+if [[ -f /usr/local/bin/zsh ]]; then
+  export SHELL=/usr/local/bin/zsh
 fi
 
 0=${(%):-%N}
