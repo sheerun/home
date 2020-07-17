@@ -95,12 +95,15 @@ export HISTFILE=$HOME/.zsh_history
 # increase history size
 export SAVEHIST=100000
 export HISTSIZE=100000
+export HISTFILESIZE=100000
 
 # save lines in history file as soon as they appear instead of on exit
-setopt share_history
+setopt SHARE_HISTORY
+setopt HIST_IGNORE_ALL_DUPS
+setopt HIST_REDUCE_BLANKS
 
 # allow to go back with popd
-setopt autopushd
+setopt AUTOPUSHD
 
 # allow to use C-s and C-q shortcuts in vim
 stty -ixon
