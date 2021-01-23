@@ -132,11 +132,6 @@ if [[ -d $HOME/.fzf ]]; then
   source "$HOME/.fzf/shell/key-bindings.zsh"
 fi
 
-# set `open` tool as default `BROWSER` on OS X.
-if [[ "$OSTYPE" == darwin* ]]; then
-  export BROWSER='open'
-fi
-
 # make vim default editor
 if [[ -z "$EDITOR" ]]; then
   export EDITOR=vim
@@ -151,4 +146,6 @@ if [[ -f /usr/local/bin/zsh ]]; then
 fi
 
 0=${(%):-%N}
-source ${0:A:h}/plugins/*.zsh
+for p in ${0:A:h}/plugins/*.zsh; do
+  source "$p"
+done
