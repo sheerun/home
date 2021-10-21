@@ -2,6 +2,8 @@
 
 > Pretty, short, one-line ZSH prompt that makes you feel at home
 
+![](https://i.imgur.com/w685ogZ.png)
+
 ## Installation
 
 If you wish to install just prompt, paste this line in your `~/.zshrc`:
