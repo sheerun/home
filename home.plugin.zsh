@@ -1,8 +1,16 @@
+# find homebrew programs
+if [[ $OSTYPE == 'darwin'* ]]; then
+  export PATH="/opt/homebrew/bin:$HOME/.bin:$PATH"
+fi
+
+# find programs embedded in dotfiles
+export PATH="$HOME/.bin:$PATH"
+
 # the prompt itself
 if [ -z "$SSH_CLIENT" ]; then
-  PROMPT="%F{000}%(?.%K{148}.%K{red}) %(?.⌂.✘) %F{249}%K{236} %1~ %k%f "
+  PROMPT="%F{000}%(?.%K{148}.%K{red}) %(?.⌂.✘) %F{249}%K{236} %1~ %k%f "
 else
-  PROMPT="%F{000}%(?.%K{33}.%K{red}) %(?.⌂.✘) %F{249}%K{236} %1~ %k%f "
+  PROMPT="%F{000}%(?.%K{33}.%K{red}) %(?.⌂.✘) %F{249}%K{236} %1~ %k%f "
 fi
 
 unset RPROMPT
@@ -136,9 +144,6 @@ fi
 if [[ -z "$EDITOR" ]]; then
   export EDITOR=vim
 fi
-
-# find programs embedded in dotfiles
-export PATH="/usr/local/sbin:$HOME/.bin:$PATH"
 
 # set newer shell if exists
 if [[ -f /usr/local/bin/zsh ]]; then
