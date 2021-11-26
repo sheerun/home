@@ -93,6 +93,10 @@ zstyle ':filter-select' rotate-list yes
 zstyle ':filter-select' case-insensitive yes # enable case-insensitive search
 
 # list colorful directories first if possible
+if [[ $OSTYPE == 'linux'* ]]; then
+  alias ls="ls --color=auto --group-directories-first"
+fi
+
 if command -v gls > /dev/null; then
   alias ls='gls --color=tty --group-directories-first'
 fi
